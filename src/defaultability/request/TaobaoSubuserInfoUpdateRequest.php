@@ -52,15 +52,15 @@ class TaobaoSubuserInfoUpdateRequest {
     public function toMap() : array{
         $requestParam = array();
         if (!TopUtil::checkEmpty($this->subId)) {
-            $requestParam["sub_id"] = TopUtil::convertBasic($this->subId);
+            $requestParam["sub_id"] = TopUtil::convertStruct($this->subId);
         }
 
         if (!TopUtil::checkEmpty($this->isDispatch)) {
-            $requestParam["is_dispatch"] = TopUtil::convertBasic($this->isDispatch);
+            $requestParam["is_dispatch"] = TopUtil::convertStruct($this->isDispatch);
         }
 
         if (!TopUtil::checkEmpty($this->isDisableSubaccount)) {
-            $requestParam["is_disable_subaccount"] = TopUtil::convertBasic($this->isDisableSubaccount);
+            $requestParam["is_disable_subaccount"] = TopUtil::convertStruct($this->isDisableSubaccount);
         }
 
         return $requestParam;
